@@ -7,14 +7,18 @@ class BlockChain
   attr_reader :blocks
 
   def initialize
+    # ブロックチェーンを納めるための最初の空のリスト
     @blocks = []
+    # ジェネシス・ブロックをブロックチェーンの最初に追加する
     @blocks << BlockChain.get_genesis_block()
   end
 
+  # ブロックチェーンの最後のブロックを返す
   def last_block
     @blocks.last
   end
 
+  # 新しいブロックを作る
   def next_block transactions
     height = last_block.height + 1
     timestamp = Time.now.to_i
@@ -53,6 +57,7 @@ class BlockChain
     true
   end
 
+  # 作ったブロックをチェーンに追加する
   def add_block new_block
     if is_valid_new_block?(new_block, last_block)
       @blocks << new_block

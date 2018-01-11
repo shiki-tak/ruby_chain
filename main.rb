@@ -40,5 +40,5 @@ $receive_block_chain.blocks.each do |block|
   # puts "transactions_hash: #{block.transactions_hash}"
   puts "transactions: #{block.transactions}"
   puts "nonce: #{block.nonce}"
-  puts "*************************"
+  puts ""
 end

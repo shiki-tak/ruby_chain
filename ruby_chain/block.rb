@@ -28,6 +28,7 @@ class Block
     end
 
   class << self
+    # ジェネシス・ブロックを作成する
     def create_genesis_block
       address = "62e907b15cbf27d5425399ebf6f0fb50ebb88f18"
       genesis_coinbase_data = "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
