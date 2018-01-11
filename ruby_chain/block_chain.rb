@@ -27,7 +27,8 @@ class BlockChain
     pow = ProofOfWork.new(
       timestamp: timestamp,
       previous_hash: previous_hash,
-      transactions: transactions)
+      transactions: transactions
+    )
 
     nonce, hash = pow.do_proof_of_work
 
